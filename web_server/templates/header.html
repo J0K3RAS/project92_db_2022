@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+        
+        <meta charset="utf-8">
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body onload="CheckMessages()">   
+        <script>
+        function CheckMessages() {
+            // $('body').toast({message: "hi"});
+            $('.tabular.menu .item').tab();
+            $('.selection.dropdown').dropdown();
+        }
+        </script>
+
+
+        {% block body %}
+        {% endblock %}
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>    
+</html>
+

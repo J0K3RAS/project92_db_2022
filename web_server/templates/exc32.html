@@ -1,0 +1,109 @@
+{% extends 'header.html' %}
+
+
+{% block body %}
+<div class="full height">
+    <div class="toc">
+        <div class="ui left vertical sidebar inverted menu visible">
+          <a class="item" href="/">
+            <b>Index</b>
+            <i class="home icon"></i>
+            
+          </a>
+          <div class="item">
+              <div class="header">Ερωτήματα</div>
+              <div class="ui inverted vertical pointing menu">
+                  <a class="item" href="/31">
+                    3.1: Προγράμματα/Έργα/Φόρμα
+                  </a>
+                  <a class="active item" href="/32">
+                    3.2: Όψεις σχεσιακού μοντέλου
+                  </a>
+                  <a class="item" href="/33">
+                    3.3: Έργα/Ερευνητές σε επιστημονικό πεδίο
+                  </a>
+                  <a class="item" href="/34">
+                    3.4: Οργανισμοί: Έργα των 2 τελευταίων ετών
+                  </a>
+                  <a class="item" href="/35">
+                    3.5: Top-3 ζεύγη επιστημονικών πεδίων
+                  </a>
+                  <a class="item" href="/36">
+                    3.6: Νέοι ερευνητές
+                  </a>
+                  <a class="item" href="/37">
+                    3.7: Top-5 στελέχη ΕΛ.ΙΔ.Ε.Κ
+                  </a>
+                  <a class="item" href="/38">
+                    3.8: Ερευνητές σε έργα χωρίς παραδοτέα
+                  </a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="article" style="margin-left: 300px;height: 100vh;display: flex; flex-direction: column;align-items:center;margin-right: 50px;">
+
+          <div class="ui container">
+
+              <h1 class="ui header" style="margin-top: 50px;">
+                Δύο όψεις του σχεσιακού μοντέλου
+                <div class="sub header">
+                  Ερώτημα 3.2
+                </div>
+              </h1>
+              <div class="ui hidden divider"></div>
+              <div class="ui top attached tabular menu">
+                <div class="item active" data-tab="one">View 1</div>
+                <div class="item" data-tab="two">View 2</div>
+              </div>
+              <div class="ui bottom attached tab segment active" data-tab="one">
+                <p>Έργα/επιχορηγήσεις ανά ερευνητή </p>
+                <table class="ui fixed table">
+                  <thead>
+                    <tr><th>Όνομα Ερευνητή</th>
+                    <th>Επίθετο Ερευνητή</th>
+                    <th>Όνομα Έργου</th>
+                  </tr></thead>
+                  <tbody>
+                    {% for row in view1 %}
+                      <tr>
+                          <td>{{ row['first_name'] }}</td>
+                          <td>{{ row['last_name'] }}</td>
+                          <td>{{ row['title'] }} </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <div class="ui bottom attached tab segment" data-tab="two">
+                <p>Πλήθος έργων που αναλαμβάνει ο κάθε οργανισμός ετησίως</p>
+                <table class="ui fixed table">
+                  <thead>
+                    <tr><th>ID Οργανισμού</th>
+                    <th>Όνομα οργανισμού</th>
+                    <th>Πλήθος έργων</th>
+                    <th>Έτος</th>
+                  </tr></thead>
+                  <tbody>
+                    {% for row in view2 %}
+                      <tr>
+                          <td>{{ row['org_id'] }}</td>
+                          <td>{{ row['org_name'] }}</td>
+                          <td>{{ row['count'] }}</td>
+                          <td>{{ row['year'] }} </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+          </div>
+          
+     
+    </div>
+</div>
+
+{% endblock %}
+
+

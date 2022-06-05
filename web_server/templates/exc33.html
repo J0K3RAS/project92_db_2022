@@ -1,0 +1,107 @@
+{% extends 'header.html' %}
+
+
+{% block body %}
+<div class="full height">
+    <div class="toc">
+        <div class="ui left vertical sidebar inverted menu visible">
+          <a class="item" href="/">
+            <b>Index</b>
+            <i class="home icon"></i>
+            
+          </a>
+          <div class="item">
+              <div class="header">Ερωτήματα</div>
+              <div class="ui inverted vertical pointing menu">
+                  <a class="item" href="/31">
+                    3.1: Προγράμματα/Έργα/Φόρμα
+                  </a>
+                  <a class="item" href="/32">
+                    3.2: Όψεις σχεσιακού μοντέλου
+                  </a>
+                  <a class="active item" href="/33">
+                    3.3: Έργα/Ερευνητές σε επιστημονικό πεδίο
+                  </a>
+                  <a class="item" href="/34">
+                    3.4: Οργανισμοί: Έργα των 2 τελευταίων ετών
+                  </a>
+                  <a class="item" href="/35">
+                    3.5: Top-3 ζεύγη επιστημονικών πεδίων
+                  </a>
+                  <a class="item" href="/36">
+                    3.6: Νέοι ερευνητές
+                  </a>
+                  <a class="item" href="/37">
+                    3.7: Top-5 στελέχη ΕΛ.ΙΔ.Ε.Κ
+                  </a>
+                  <a class="item" href="/38">
+                    3.8: Ερευνητές σε έργα χωρίς παραδοτέα
+                  </a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="article" style="margin-left: 300px;height: 100vh;display: flex; flex-direction: column;align-items:center;margin-right: 50px;">
+
+          <div class="ui container">
+
+              <h1 class="ui header" style="margin-top: 50px;">
+                 Ερευνητές που εργάζονται σε (ενεργά) έργα σε συγκεκριμένο επιστημονικό πεδίο
+                <div class="sub header">
+                  Ερώτημα 3.3
+                </div>
+              </h1>
+              <div class="ui hidden divider"></div>
+              <div class="ui inverted segment">
+                <form class="ui inverted form" method="POST" action="/33"> <!--style="display: inline;margin: 0px;"> -->
+                  <div class="field">
+                      <label>Επιλέξτε επιστημονικό πεδίο</label>
+                      <div class="ui selection dropdown">
+                          <input type="hidden" name="choice">
+                          <i class="dropdown icon"></i>
+                          <div class="default text">{{ name }}</div>
+                          <div class="menu">
+                              {% for c in choices %}
+                                <div class="item" data-value="{{ c['Name'] }}">{{ c['Name'] }}</div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+
+                  <button class="positive ui right labeled icon button" type="submit">
+                    <i class="right arrow icon"></i>
+                    Υποβολή
+                  </button>
+                </form>
+              </div>
+              <div class="ui hidden divider"></div>
+              <table class="ui fixed table">
+                <thead>
+                  <tr><th>ID Έργου</th>
+                  <th>Όνομα Έργου</th>
+                  <th>ID Ερευνητή</th>
+                  <th>Όνομα Ερευνητή</th>
+                  <th>Επίθετο Ερευνητή</th>
+                </tr></thead>
+                <tbody>
+                  {% for row in result %}
+                    <tr>
+                        <td>{{ row['id_ergo'] }}</td>
+                        <td>{{ row['Title'] }}</td>
+                        <td>{{ row['id_researcher'] }}</td>
+                        <td>{{ row['FirstName'] }}</td>
+                        <td>{{ row['LastName'] }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+          
+     
+    </div>
+</div>
+
+{% endblock %}
+
