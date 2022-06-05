@@ -144,31 +144,30 @@ password: examplepass
 views. Ακολουθώντας τα παρακάτω βήματα μπορείτε να εισάγεται το εν λόγω
 αρχείο στην βάση:
 
-::: enumerate
-Από την αρχική σελίδα του phpmyadmin επιλέξτε το κουμπί **Import** στο
-πάνω menu.
+
+-   Από την αρχική σελίδα του phpmyadmin επιλέξτε το κουμπί **Import** στο..
+πάνω menu. ..
 
 ![image](screenshots/screen1.png)
 
-Στην σελίδα που μας ανοίγει, πρέπει να επιλέξετε για import κάποιο από
-τα διαθέσιμα στον υπολογιστή σας. Πατήστε Choose Files και επιλέξτε το
-ddl αρχείο μας, project92_ddl.sql. Οι υπόλοιπες επιλογές μπορούν να
-μείνουν ως έχουν, δηλαδή:
+Στην σελίδα που μας ανοίγει, πρέπει να επιλέξετε για import κάποιο από ..
+τα διαθέσιμα στον υπολογιστή σας. Πατήστε Choose Files και επιλέξτε το ..
+ddl αρχείο μας, project92_ddl.sql. Οι υπόλοιπες επιλογές μπορούν να ..
+μείνουν ως έχουν, δηλαδή: ..
 
-::: list
 
-Allow the interruption of an import in case the script detects it is
-close to the PHP timeout limit.
+ -     Allow the interruption of an import in case the script detects it is ..
+      close to the PHP timeout limit.
 
-Enable foreign key checks
+ -     Enable foreign key checks 
 
-Do not use AUTO_INCREMENT for zero values
+ -     Do not use AUTO_INCREMENT for zero values
 
-Skip this number of queries (for SQL) starting from the first one: 0
+ -    Skip this number of queries (for SQL) starting from the first one: 0
 
-Format: SQL
+ -    Format: SQL
 
-SQL Compatibility mode: NONE
+ -    SQL Compatibility mode: NONE
 :::
 
 ![image](screenshots/screen2.png)
