@@ -240,7 +240,7 @@ app.config["MYSQL_DB"] = "project92"
 εμπλουτίσαμε το δικό μας σε κάποια σημεία με το προτεινόμενο ER που είχε
 αναρτηθεί.
 
-![image](\string"screenshots/ΕΡ ΝΟΙΣΕ\string".png)
+![image](diagrams/ERDiagram.png)
 
 ## Σχεσιακό Διάγραμμα
 
