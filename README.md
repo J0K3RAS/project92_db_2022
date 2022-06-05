@@ -145,30 +145,29 @@ views. Ακολουθώντας τα παρακάτω βήματα μπορεί�
 αρχείο στην βάση:
 
 
--   Από την αρχική σελίδα του phpmyadmin επιλέξτε το κουμπί **Import** στο..
-πάνω menu. ..
+-   Από την αρχική σελίδα του phpmyadmin επιλέξτε το κουμπί **Import** στο
+πάνω menu.
 
 ![image](screenshots/screen1.png)
 
-Στην σελίδα που μας ανοίγει, πρέπει να επιλέξετε για import κάποιο από ..
-τα διαθέσιμα στον υπολογιστή σας. Πατήστε Choose Files και επιλέξτε το ..
-ddl αρχείο μας, project92_ddl.sql. Οι υπόλοιπες επιλογές μπορούν να ..
-μείνουν ως έχουν, δηλαδή: ..
+Στην σελίδα που μας ανοίγει, πρέπει να επιλέξετε για import κάποιο από 
+τα διαθέσιμα στον υπολογιστή σας. Πατήστε Choose Files και επιλέξτε το 
+ddl αρχείο μας, project92_ddl.sql. Οι υπόλοιπες επιλογές μπορούν να
+μείνουν ως έχουν, δηλαδή: 
 
 
- -     Allow the interruption of an import in case the script detects it is ..
+ -    Allow the interruption of an import in case the script detects it is ..
       close to the PHP timeout limit.
 
- -     Enable foreign key checks 
+ -    Enable foreign key checks 
 
- -     Do not use AUTO_INCREMENT for zero values
+ -    Do not use AUTO_INCREMENT for zero values
 
  -    Skip this number of queries (for SQL) starting from the first one: 0
 
  -    Format: SQL
 
  -    SQL Compatibility mode: NONE
-:::
 
 ![image](screenshots/screen2.png)
 
@@ -177,7 +176,6 @@ ddl αρχείο μας, project92_ddl.sql. Οι υπόλοιπες επιλογ
 μπορείτε να δείτε την βάση μας στο αριστερό menu του phpmyadmin.
 
 > Σε περίπτωση που αποτύχει η παραπάνω διαδικασία λόγω των foreign key checks, κάντε drop την βάση και δοκιμάστε πάλι χωρίς να επιλέξετε το κουτάκι Enable foreign key checks.
-:::
 
 ## Εισαγωγή του dml αρχείου
 
