@@ -148,7 +148,7 @@ views. Ακολουθώντας τα παρακάτω βήματα μπορεί�
 Από την αρχική σελίδα του phpmyadmin επιλέξτε το κουμπί **Import** στο
 πάνω menu.
 
-![image](screenshots/dml ddl/screeen1.png)
+![image](screenshots/screen1.png)
 
 Στην σελίδα που μας ανοίγει, πρέπει να επιλέξετε για import κάποιο από
 τα διαθέσιμα στον υπολογιστή σας. Πατήστε Choose Files και επιλέξτε το
@@ -171,7 +171,7 @@ Format: SQL
 SQL Compatibility mode: NONE
 :::
 
-![image](screenshots/dml ddl/screeen2.png)
+![image](screenshots/screen2.png)
 
 Τέλος πατήστε το κουμπί **Go** στο κάτω δεξιά μέρος της σελίδας. Αν όλα
 πάνε καλά ευχάριστα μηνύματα επιτυχίας θα γεμίσουν την οθόνη σας και θα
