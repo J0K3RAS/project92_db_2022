@@ -248,7 +248,7 @@ app.config["MYSQL_DB"] = "project92"
 μας. Το εν λόγω διάγραμμα περιέχει τους πίνακες που ορίσαμε με τις
 αντίστοιχες κολώνες τους, καθώς και τις σχέσεις μεταξύ των πινάκων.
 
-![image](screenshots/RelationSchema.png)
+![image](diagrams/RelationSchema.png)
 
 Όπως μπορείτε να δείτε οι πίνακες είναι παραπάνω από τα Entities στο ER
 diagram. Αυτο οφείλεται στο γεγονός ότι τα Many-to-Many relationships
